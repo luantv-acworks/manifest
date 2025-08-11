@@ -1,5 +1,7 @@
-:80 log {
-    output stdout
-format json }
-root * /usr/share/caddy
-file_server
+:80 {
+    route /caddy* {
+        respond "ok" 200
+    }
+    root * /usr/share/caddy
+    file_server
+}

@@ -6,10 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 
 spec:
-  ingressClassName: nginx
-  tls:
-    - hosts:
-        - '*.namnt.net'
+  ingressClassName: alb
   rules:
     - host: caddy.namnt.net
       http:
